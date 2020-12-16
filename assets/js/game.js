@@ -91,13 +91,15 @@ var startGame = function() {
         break;
       }
     }
+    // after the loop ends, player is either out of health or enemies to fight, so run the endGame function
+    endGame();
+
 
     //play again
     startGame();
   };
 
-  // start the game when the page loads
-startGame();
+
 
 // function to end the entire game
 var endGame = function() {
@@ -120,3 +122,5 @@ if (playAgainConfirm) {
 else {
   window.alert("Thank you for playing Robot Gladiators! Come back soon!");
 }
+  // start the game when the page loads
+  startGame();
